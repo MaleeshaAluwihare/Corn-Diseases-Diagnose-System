@@ -1,1 +1,1 @@
-# Leaf-Health---LeafHealth---Corn-Diseases-Diagnose-System-
+# LeafHealth-Corn-Diseases-Diagnose-System
