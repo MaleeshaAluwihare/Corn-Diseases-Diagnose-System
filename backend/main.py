@@ -40,7 +40,7 @@ async def predict(file: UploadFile = File(...)):
         # Preprocess the image
         image = image.resize((IMAGE_SIZE, IMAGE_SIZE))  # Resize to model input size
         image_array = img_to_array(image)  # Convert to numpy array
-        # image_array = image_array / 255.0  # Normalize pixel values
+        image_array = image_array / 255.0  # Normalize pixel values
         image_array = np.expand_dims(image_array, axis=0)  # Add batch dimension
 
         # Make prediction
@@ -60,3 +60,4 @@ async def predict(file: UploadFile = File(...)):
             content={"error": str(e)},
             status_code=500
         )
+
